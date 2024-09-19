@@ -50,6 +50,10 @@ h1, h2 {
     position: relative;
 }
 
+.index {
+    filter: brightness(0.5);
+}
+
 .welcome-page-div h1 {
     color: white; /* Text color */
     font-size: 3rem; /* Adjust size as needed */
