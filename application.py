@@ -11,9 +11,14 @@ application.config['SECRET_KEY'] = os.getenv('SECRET_KEY')
 Bootstrap5(application)
 
 
+@application.route('/favicon.ico')
+def favicon():
+    return '', 204
+
+
 @application.route("/")
 def index():
-    return render_template("index.html")
+    return render_template("welcome-page.html")
 
 
 if __name__ == "__main__":

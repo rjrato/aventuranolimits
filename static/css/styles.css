@@ -1,0 +1,66 @@
+/*-- COLOR PALLET
+#03AED2 - Blue;
+#68D2E8 - Light Blue;
+#FDDE55 - Yellow;
+#FEEFAD - Light Yellow;
+--*/
+
+@font-face {
+    font-family: Lovelo-Black;
+    src: url("./../fonts/Lovelo-Black.eot");
+    src: url("./../fonts/Lovelo-Black.eot?#iefix") format("embedded-opentype"),
+        url("./../fonts/Lovelo-Black.woff2") format("woff2"),
+        url("./../fonts/Lovelo-Black.woff") format("woff"),
+        url("./../fonts/Lovelo-Black.ttf") format("truetype");
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+p, ul, a {
+  font-family: "Arimo";
+}
+
+li {
+    list-style-type: none;
+}
+
+h1, h2 {
+    font-family: "Lovelo-Black";
+}
+
+.main-content {
+    height: 100vh; /* Full viewport height */
+    display: flex;
+    justify-content: center; /* Horizontally center */
+    align-items: center;     /* Vertically center */
+}
+
+.welcome-page-div {
+    background-image: url('../img/welcome-page.webp'); /* Image path */
+    background-size: cover; /* Make image cover entire div */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Prevent repeating */
+    width: 100vw; /* Full width of viewport */
+    height: 100vh; /* Full height of viewport */
+    display: flex;
+    justify-content: center; /* Horizontally center the text */
+    align-items: center;     /* Vertically center the text */
+    position: relative;
+}
+
+.welcome-page-div h1 {
+    color: white; /* Text color */
+    font-size: 3rem; /* Adjust size as needed */
+    text-align: center;
+    z-index: 1; /* Ensure the text is above the background image */
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black background */
+    padding: 10px 20px;
+    border-radius: 8px;
+}
+
+.container-fluid {
+    padding: 0;
+    margin: 0;
+}
