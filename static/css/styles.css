@@ -33,6 +33,15 @@ h1, h2 {
     font-family: "Lovelo-Black";
 }
 
+.divider {
+    width: 100%;
+    height: 5rem;
+    background-color: rgba(0, 0, 0, .1);
+    border: solid rgba(0, 0, 0, .15);
+    border-width: 1px 0;
+    box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
+}
+
 .main-content {
     height: 100vh; /* Full viewport height */
     display: flex;
@@ -146,7 +155,7 @@ nav input {
     display: none;
 }
 
-@media (max-width: 992px) {
+@media (max-width: 768px) {
     .nav-hamburger {
         position: relative;
         right: 20px;
@@ -220,4 +229,10 @@ nav input {
     height: auto;
 }
 
+/*-- ABOUT --*/
+.about-team-img {
+    width: 70vw;
+    height: auto;
+    box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.3);
+}
 
