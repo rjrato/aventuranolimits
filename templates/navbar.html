@@ -4,12 +4,12 @@
     <header>
 
         <!-- NAVBAR -->
-        <section id="d-flex flex-column navbar">
+        <section id="navbar">
 
-            <nav class=" navbar">
+            <nav class="navbar">
 
-                <div id="justify-content-start nav-company-logo">
-                    <img src="">
+                <div id="justify-content-start" class="nav-logo-img-div">
+                    <img class="nav-logo-img" src="{{ url_for('static', filename='img/logo.png') }}" alt="navbar company logo" loading="lazy">
                 </div>
 
                 <div class="nav-links">
@@ -22,7 +22,7 @@
                     </ul>
                 </div>
 
-                <div id="hamburger-div" class="justify-content-end hamburger">
+                <div id="hamburger-div" class="justify-content-end nav-hamburger">
                     <input type="checkbox" id="hamburger-input" name="hamburger" />
                     <label for="hamburger-input">
                         <span></span>
