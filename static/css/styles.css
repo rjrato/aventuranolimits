@@ -5,6 +5,7 @@
 #68D2E8 - Light Blue;
 #FDDE55 - Yellow;
 #FEEFAD - Light Yellow;
+#FEF9D9 - Lighter Yellow;
 #e54631 - Red;
 #6EC207 - Green;
 --*/
@@ -25,6 +26,16 @@
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
+
+::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+
+  }
+  ::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background: #c2c9d2;
+  }
 
 body {
     margin: 0;
@@ -120,7 +131,7 @@ h1, h2 {
     right: 0;
     left: 0;
     width: 100%;
-    background-color: #FEEFAD;
+    background: linear-gradient(0deg, #FEF9D9 50%, #FEEFAD);
     z-index: 10;
 }
 
@@ -588,5 +599,229 @@ nav input {
 
     .wk-mobile-12 {
         width: 100%;
+    }
+}
+
+/*-- SERVICES --*/
+.services-bg {
+    background-color: #FEEFAD;
+}
+
+/*-- TESTIMONIALS CAROUSEL --*/
+.testimonials-bg-div {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    width: 100%;
+    background-image: radial-gradient(
+        at 40% 20%,
+        rgb(61, 131, 183) 0px,
+        transparent 50%
+      ),
+      radial-gradient(at 80% 0%, rgb(61, 131, 183) 0px, transparent 50%),
+      radial-gradient(at 0% 50%, rgb(104, 210, 232) 0px, transparent 50%),
+      radial-gradient(at 80% 50%, rgb(253, 222, 85) 0px, transparent 50%),
+      radial-gradient(at 0% 100%, rgb(253, 222, 85) 0px, transparent 50%),
+      radial-gradient(at 80% 100%, rgb(107, 102, 255) 0px, transparent 50%),
+      radial-gradient(at 0% 0%, rgb(254, 239, 173) 0px, transparent 50%);
+    background-repeat: no-repeat;
+}
+
+.testimonials-div {
+    width: 1000px;
+}
+
+.testimonials-bg-div h1 {
+    text-align: center;
+    font-size: clamp(2rem, 4vw, 2.6rem);
+}
+
+.slide-row {
+    display: flex;
+    width: 8000px;
+    transition: 0.5s;
+}
+
+.slide-col {
+    position: relative;
+    width: 1000px;
+    height: 500px;
+}
+
+.hero {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+}
+
+.hero img {
+    height: 100%;
+    border-radius: 10px;
+    width: 320px;
+    object-fit: cover;
+    pointer-events: none;
+    user-select: none;
+}
+
+.content {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 720px;
+    height: auto;
+    color: #4d4352;
+    background: rgba(255, 255, 255, 0.7);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(4.5px);
+    -webkit-backdrop-filter: blur(4.5px);
+    border-radius: 10px;
+    padding: 45px;
+    z-index: 2;
+    user-select: none;
+}
+
+.carousel-quotes {
+    padding-left: 5px;
+    padding-right: 5px;
+    width: 25px;
+    height: 25px;
+}
+
+.content p {
+    font-size: 1.25rem;
+    font-weight: 400;
+    line-height: 1.3;
+}
+
+.content h2 {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: #4d4352;
+}
+
+.indicator {
+    display: flex;
+    justify-content: center;
+    margin-top: 4rem;
+    padding-bottom: 20px;
+}
+
+.indicator .carousel-btn {
+    display: inline-block;
+    height: 15px;
+    width: 15px;
+    margin: 4px;
+    border-radius: 15px;
+    background: #fff;
+    cursor: pointer;
+    transition: all 0.5s ease-in-out;
+}
+
+.carousel-btn.active {
+    width: 30px;
+}
+
+.carousel-control {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.1);
+    border: none;
+    color: white;
+    font-size: 2rem;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 10;
+    user-select: none;
+    transition: all 0.5s ease-in-out;
+}
+
+.carousel-control:focus {
+    outline: none;
+}
+
+.carousel-control:hover {
+    transition: all 0.5s ease-in-out;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+.carousel-left-control {
+    left: 20px;
+}
+
+.carousel-right-control {
+    right: 20px;
+}
+
+.slider {
+    width: 100%;
+    overflow: hidden;
+}
+
+@media (max-width: 850px) {
+    testimonials-div {
+        width: 500px;
+    }
+
+    .slide-row {
+        width: 2000px;
+    }
+
+    .slide-col {
+        width: 500px;
+        height: 250px;
+    }
+
+    .hero img {
+        width: 200px;
+    }
+
+    .content {
+        width: 320px;
+        height: 200px;
+        padding: 20px;
+    }
+
+    .content p {
+        font-size: 0.9rem;
+    }
+
+    .content h2 {
+        font-size: 1.2rem;
+        margin-top: 20px;
+    }
+}
+
+@media (max-width: 550px) {
+    .testimonials-div {
+        width: 300px;
+    }
+
+    .slide-row {
+        width: 1200px;
+    }
+
+    .slide-col {
+        width: 500px;
+        height: 300px;
+    }
+
+    .hero {
+        top: 60%;
+        height: 100px;
+        z-index: 5;
+    }
+
+    .hero img {
+        width: 100px;
+    }
+
+    .content {
+        width: 300px;
     }
 }
