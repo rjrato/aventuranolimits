@@ -1,7 +1,7 @@
 from flask import Flask, render_template, redirect, url_for, session
 from flask_bootstrap import Bootstrap5
 from dotenv import load_dotenv
-from datetime import date
+from datetime import datetime
 import os
 
 load_dotenv()
@@ -23,7 +23,8 @@ def index():
 
 @application.route("/progresso")
 def progress():
-    return render_template("index.html")
+    year = datetime.now().year
+    return render_template("index.html", year=year)
 
 
 if __name__ == "__main__":

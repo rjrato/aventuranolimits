@@ -57,6 +57,10 @@ h1, h2 {
     font-family: "Lovelo-Black";
 }
 
+h1 {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
 .divider {
     width: 100%;
     height: 5rem;
@@ -264,10 +268,6 @@ nav input {
     box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.3);
 }
 
-.about-1 {
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
-}
-
 .about-sep1 {
     position: relative;
 }
@@ -337,8 +337,7 @@ nav input {
     padding-left: 30px;
 }
 
-.team-head-text {
-    font-size: 48px;
+.about-team-head-text {
     line-height: 50px;
     font-weight: 900;
     text-align: center;
@@ -607,6 +606,10 @@ nav input {
     background-color: #FEEFAD;
 }
 
+.services-img {
+    box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.3);
+}
+
 /*-- TESTIMONIALS CAROUSEL --*/
 .testimonials-bg-div {
     position: relative;
@@ -637,6 +640,7 @@ nav input {
 .testimonials-bg-div h1 {
     text-align: center;
     font-size: clamp(2rem, 4vw, 2.6rem);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
 }
 
 .slide-row {
@@ -661,7 +665,7 @@ nav input {
 .hero img {
     height: 100%;
     border-radius: 10px;
-    width: 320px;
+    width: 420px;
     object-fit: cover;
     pointer-events: none;
     user-select: none;
@@ -708,7 +712,7 @@ nav input {
     display: flex;
     justify-content: center;
     margin-top: 4rem;
-    padding-bottom: 20px;
+    padding-bottom: 4rem;
 }
 
 .indicator .carousel-btn {
@@ -824,4 +828,75 @@ nav input {
     .content {
         width: 300px;
     }
+}
+
+/*-- CONTACT SECTION --*/
+.contact-bg {
+    padding-top: 50px;
+    height: 35vw;
+    width: auto;
+    background: url("../img/contactos.webp") no-repeat center center/cover;
+}
+
+.contacts-media-li img {
+    transition: transform .4s ease-in-out;
+}
+
+.contacts-media-li img:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
+.contacts-media-li-p {
+    font-size: 1rem;
+}
+
+.contact-form-bg {
+    background-color: #ff8f87;
+}
+
+.contacts-form-button {
+    font-family: "Arimo" !important;
+    font-weight: bold;
+    font-size: 1.3rem;
+    color: #FCFAEE;
+    background-color: #3d83b7;
+    border: solid #3d83b7
+}
+
+.contacts-form-button:hover {
+    color: #FCFAEE;
+    background-color: #68D2E8;
+    border: solid #68D2E8;
+}
+
+.contacts-form-button:active {
+    font-size: 1.2rem;
+    color: #FCFAEE !important;
+    background-color: #3d83b7 !important;
+    border: solid #68D2E8 !important;
+}
+
+/*-- FOOTER --*/
+.footer{
+    background-color: #3d83b7;
+}
+
+.footer-a {
+    text-decoration: none;
+}
+
+.fab, .fa-brands {
+    width: 30px;
+    height: 30px;
+    transition: transform 0.2s ease-in-out;
+}
+
+.fab:hover, .fa-brands:hover {
+    transition: transform 0.2s ease-in-out;
+    transform: scale(1.2);
+}
+
+.footer-p {
+    font-size: 0.8rem;
 }
