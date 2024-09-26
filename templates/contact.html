@@ -21,7 +21,9 @@
                             <ul class="d-flex flex-row p-3">
                                 <!-- WHATSAPP -->
                                 <li class="contacts-media-li m-0 p-3">
-                                    <img src="{{ url_for('static', filename='img/whatsapp.webp') }}" class="d-block mx-lg-auto img-fluid" alt="whatsapp contact icon" width="60" height="60" loading="lazy">
+                                    <a href="https://wa.me/351966960227" target="_blank">
+                                        <img src="{{ url_for('static', filename='img/whatsapp.webp') }}" class="d-block mx-lg-auto img-fluid" alt="whatsapp contact icon" width="60" height="60" loading="lazy">
+                                    </a>
                                     <p class="text-secondary contacts-media-li-p">aventurasnolimits</p>
                                 </li>
                                 <!-- INSTAGRAM -->
@@ -47,7 +49,7 @@
                                 <div class="col-12 col-lg-9">
                                     <div class="bg-white border rounded shadow-sm overflow-hidden">
 
-                                        <form action="#!">
+                                        <form id="contact-form" action="{{ url_for('contact') }}" method="POST">
                                             <div class="row gy-4 gy-xl-5 p-4 p-xl-5">
                                                 <div class="col-12">
                                                     <label for="fullname" class="form-label">Nome<span class="text-danger">*</span></label>
@@ -81,7 +83,9 @@
                                                 </div>
                                                 <div class="col-12">
                                                     <div class="d-grid">
-                                                        <button class="btn btn-lg contacts-form-button" type="submit">Enviar</button>
+                                                        <input type="hidden" name="recaptcha_token" id="recaptcha-token">
+                                                        <input type="hidden" id="recaptcha-site-key" value="{{ key }}">
+                                                        <button class="btn btn-lg contacts-form-button" value="submit">Enviar</button>
                                                     </div>
                                                 </div>
                                             </div>
@@ -94,6 +98,8 @@
                     </div>
                 </div>
             </div>
+
+            <div id="feedback-message" class="feedback-message"></div>
 
         </section>
 

@@ -48,3 +48,53 @@ setInterval(() => {
     currentIndex = (currentIndex < totalSlides - 1) ? currentIndex + 1 : 0;
     updateSlide();
 }, 5000);
+
+// reCAPTCHA
+document.addEventListener("DOMContentLoaded", function() {
+    const siteKey = document.getElementById("recaptcha-site-key").value;
+
+    grecaptcha.ready(function() {
+        document.getElementById("contact-form").addEventListener("submit", function(event) {
+            event.preventDefault(); // Prevents form submission
+
+            // Execute reCAPTCHA
+            grecaptcha.execute(siteKey, { action: "submit" }).then(function(token) {
+                document.getElementById("recaptcha-token").value = token; // Set token to hidden field
+
+                // Submit form via AJAX
+                var formData = new FormData(document.getElementById("contact-form"));
+                var xhttp = new XMLHttpRequest();
+                xhttp.open("POST", "/contact", true);
+                xhttp.setRequestHeader("Accept", "application/json");
+
+                xhttp.onload = function () {
+                    var response = JSON.parse(xhttp.responseText);
+                    var feedbackMessage = document.getElementById("feedback-message");
+
+                    if (xhttp.status === 200 && response.status === "success") {
+                        feedbackMessage.innerText = response.message;
+                        feedbackMessage.classList.add("show");
+                        document.getElementById("contact-form").reset();
+
+                        setTimeout(function() {
+                            feedbackMessage.classList.remove("show");
+                            feedbackMessage.innerText = "";
+                        }, 6000);
+
+                    } else {
+                        feedbackMessage.innerText = response.message;
+                        feedbackMessage.style.color = "red";
+                        feedbackMessage.classList.add("show");
+
+                        setTimeout(function() {
+                            feedbackMessage.classList.remove("show");
+                            feedbackMessage.innerText = "";
+                        }, 6000);
+                    }
+                };
+
+                xhttp.send(formData); // Send form data via AJAX
+            });
+        });
+    });
+});
