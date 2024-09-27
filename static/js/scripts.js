@@ -49,7 +49,7 @@ setInterval(() => {
     updateSlide();
 }, 5000);
 
-// reCAPTCHA
+// reCAPTCHA && FEEDBACK MESSAGE
 document.addEventListener("DOMContentLoaded", function() {
     const siteKey = document.getElementById("recaptcha-site-key").value;
 
@@ -98,3 +98,37 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     });
 });
+
+// FADE-IN ELEMENTS
+document.addEventListener("DOMContentLoaded", function () {
+    const initialStateElements = document.querySelectorAll(".initial-state");
+
+    // Function to check if an element is in view
+    const elementInView = (el, percentageScroll = 100) => {
+        const elementTop = el.getBoundingClientRect().top;
+        const viewportHeight = window.innerHeight || document.documentElement.clientHeight;
+        return elementTop <= viewportHeight * (percentageScroll / 100);
+    };
+
+    // Function to add the visible class when the element is in view
+    const displayScrollElement = (element) => {
+        element.classList.add("fade-in");
+        element.classList.remove("initial-state");
+    };
+
+    // Loop through all initial-state elements and check if they're in view
+    const handleScrollAnimation = () => {
+        initialStateElements.forEach((el) => {
+            if (elementInView(el, 100) && el.classList.contains("initial-state")) {
+                displayScrollElement(el);
+            }
+        });
+    };
+
+    // Initial check in case elements are already in view
+    handleScrollAnimation();
+
+    // Add scroll event listener to trigger the animation on scroll
+    window.addEventListener("scroll", handleScrollAnimation);
+});
+

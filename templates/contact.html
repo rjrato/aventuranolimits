@@ -3,7 +3,7 @@
         <section id="contacts">
             <div class="container-fluid">
 
-                <div class="contact-bg"></div>
+                <div class="contact-bg initial-state"></div>
 
                 <div class="contact-form-bg">
                     <div class="bg-light py-3 py-md-5">
@@ -11,14 +11,14 @@
                         <div class="container">
                             <div class="row justify-content-md-center">
                                 <div class="col-12 col-md-10 col-lg-8 col-xl-7 col-xxl-6">
-                                    <h1 class="mb-4 display-5 text-center contacts-h1">Contactos</h1>
-                                    <h2 class="text-secondary text-center">A nossa resposta será o mais breve possível!</h2>
+                                    <h1 class="mb-4 display-5 text-center contacts-h1 initial-state">Contactos</h1>
+                                    <h2 class="text-secondary text-center initial-state">A nossa resposta será o mais breve possível!</h2>
                                 </div>
                             </div>
                         </div>
 
                         <div class="d-flex flex-row justify-content-center p-0 m-0">
-                            <ul class="d-flex flex-row p-3">
+                            <ul class="d-flex flex-row p-3 initial-state">
                                 <!-- WHATSAPP -->
                                 <li class="contacts-media-li m-0 p-3">
                                     <a href="https://wa.me/351966960227" target="_blank">
@@ -47,7 +47,7 @@
                         <div class="container">
                             <div class="row justify-content-lg-center">
                                 <div class="col-12 col-lg-9">
-                                    <div class="bg-white border rounded shadow-sm overflow-hidden">
+                                    <div class="bg-white border rounded shadow-sm overflow-hidden initial-state">
 
                                         <form id="contact-form" action="{{ url_for('contact') }}" method="POST">
                                             <div class="row gy-4 gy-xl-5 p-4 p-xl-5">
@@ -85,7 +85,7 @@
                                                     <div class="d-grid">
                                                         <input type="hidden" name="recaptcha_token" id="recaptcha-token">
                                                         <input type="hidden" id="recaptcha-site-key" value="{{ key }}">
-                                                        <button class="btn btn-lg contacts-form-button" value="submit">Enviar</button>
+                                                        <button class="btn btn-lg contacts-form-button initial-state" value="submit">Enviar</button>
                                                     </div>
                                                 </div>
                                             </div>
