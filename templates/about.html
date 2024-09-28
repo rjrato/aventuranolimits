@@ -7,7 +7,7 @@
 
                 <div class="row featurette about-team-bg pt-5 me-0">
                     <div class="col-md-4 order-md-2 p-5">
-                        <h1 class="featurette-heading fw-normal lh-1 initial-state">Quem somos nós?</h1>
+                        <h1 class="featurette-heading initial-state">Quem somos nós?</h1>
                         <h2 class="text-body-secondary initial-state">Descobre mais aqui.</h2>
                         <p class="initial-state">
                             Fundada em janeiro de 2023, a nossa empresa dedica-se a proporcionar momentos únicos e inesquecíveis, especializados na animação de eventos infantis. O nosso compromisso é garantir um serviço de excelência, desde o primeiro contacto até ao final de cada evento.
@@ -29,54 +29,20 @@
                 <div class="about-team-members-bg">
                     <div class="about-team-members-div">
 
-                        <h1 class="text-blk about-team-head-text about-h1 display-5 initial-state">A nossa equipa</h1>
+                        <h1 class="about-team-head-text display-5 initial-state">A nossa equipa</h1>
 
                         <div class="responsive-container-block teamcard-container">
 
                             <div class="responsive-cell-block wk-desk-3 wk-mobile-12 wk-tab-4 wk-ipadp-4 team-card-container">
                                 <div class="team-card">
                                     <div class="team-img-wrapper">
-                                        <img class="team-img initial-state" src="{{ url_for('static', filename='img/team1.webp') }}" alt="team member 1 photo" loading="lazy">
+                                        <img class="team-img initial-state" src="{{ url_for('static', filename='img/team-member1.webp') }}" alt="team member - Flávia - photo" loading="lazy">
                                     </div>
                                     <div class="team-card-content">
-                                        <p class="text-blk name initial-state">
-                                            Nome Colaborador
+                                        <p class="team-member-name initial-state">
+                                            Flávia
                                         </p>
-                                        <p class="text-blk position initial-state">
-                                            Função
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="responsive-cell-block wk-desk-3 wk-mobile-12 wk-tab-4 wk-ipadp-4 team-card-container">
-                                <div class="team-card">
-                                    <div class="team-img-wrapper">
-                                        <img class="team-img initial-state" src="{{ url_for('static', filename='img/team1.webp') }}" alt="team member 1 photo" loading="lazy">
-                                    </div>
-                                    <div class="team-card-content">
-                                        <p class="text-blk name initial-state">
-                                            Nome Colaborador
-                                        </p>
-                                        <p class="text-blk position initial-state">
-                                            Função
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="responsive-cell-block wk-desk-3 wk-mobile-12 wk-tab-4 wk-ipadp-4 team-card-container">
-                                <div class="team-card">
-                                    <div class="team-img-wrapper">
-                                        <img class="team-img initial-state" src="{{ url_for('static', filename='img/team1.webp') }}" alt="team member 1 photo" loading="lazy">
-                                    </div>
-                                    <div class="team-card-content">
-                                        <p class="text-blk name initial-state">
-                                            Nome Colaborador
-                                        </p>
-                                        <p class="text-blk position initial-state">
-                                            Função
-                                        </p>
+                                        <p class="text-blk position initial-state"></p>
                                     </div>
                                 </div>
                             </div>
@@ -84,15 +50,13 @@
                           <div class="responsive-cell-block wk-desk-3 wk-mobile-12 wk-tab-4 wk-ipadp-4 team-card-container">
                                 <div class="team-card">
                                     <div class="team-img-wrapper">
-                                        <img class="team-img initial-state" src="{{ url_for('static', filename='img/team1.webp') }}" alt="team member 1 photo" loading="lazy">
+                                        <img class="team-img initial-state" src="{{ url_for('static', filename='img/team-member2.webp') }}" alt="team member - Luís - photo" loading="lazy">
                                     </div>
                                     <div class="team-card-content">
-                                        <p class="text-blk name initial-state">
-                                            Nome Colaborador
+                                        <p class="team-member-name initial-state">
+                                            Luís
                                         </p>
-                                        <p class="text-blk position initial-state">
-                                            Função
-                                        </p>
+                                        <p class="text-blk position initial-state"></p>
                                     </div>
                                 </div>
                           </div>
@@ -100,15 +64,13 @@
                           <div class="responsive-cell-block wk-desk-3 wk-mobile-12 wk-tab-4 wk-ipadp-4 team-card-container">
                                 <div class="team-card">
                                     <div class="team-img-wrapper">
-                                        <img class="team-img initial-state" src="{{ url_for('static', filename='img/team1.webp') }}" alt="team member 1 photo" loading="lazy">
+                                        <img class="team-img initial-state" src="{{ url_for('static', filename='img/team-member3.webp') }}" alt="team member - Beatriz - photo" loading="lazy">
                                     </div>
                                     <div class="team-card-content">
-                                        <p class="text-blk name initial-state">
-                                            Nome Colaborador
+                                        <p class="team-member-name initial-state">
+                                            Beatriz
                                         </p>
-                                        <p class="text-blk position initial-state">
-                                            Função
-                                        </p>
+                                        <p class="text-blk position initial-state"></p>
                                     </div>
                                 </div>
                           </div>
@@ -116,15 +78,55 @@
                           <div class="responsive-cell-block wk-desk-3 wk-mobile-12 wk-tab-4 wk-ipadp-4 team-card-container">
                                 <div class="team-card">
                                     <div class="team-img-wrapper">
-                                      <img class="team-img initial-state" src="{{ url_for('static', filename='img/team1.webp') }}" alt="team member 1 photo" loading="lazy">
+                                      <img class="team-img initial-state" src="{{ url_for('static', filename='img/team-member4.webp') }}" alt="team member - Sandra - photo" loading="lazy">
                                     </div>
                                     <div class="team-card-content">
-                                      <p class="text-blk name initial-state">
-                                        Nome Colaborador
+                                      <p class="team-member-name initial-state">
+                                        Sandra
                                       </p>
-                                      <p class="text-blk position initial-state">
-                                        Função
+                                      <p class="text-blk position initial-state"></p>
+                                    </div>
+                                </div>
+                          </div>
+
+                          <div class="responsive-cell-block wk-desk-3 wk-mobile-12 wk-tab-4 wk-ipadp-4 team-card-container">
+                                <div class="team-card">
+                                    <div class="team-img-wrapper">
+                                      <img class="team-img initial-state" src="{{ url_for('static', filename='img/team-member5.webp') }}" alt="team member - Cláudia - photo" loading="lazy">
+                                    </div>
+                                    <div class="team-card-content">
+                                      <p class="team-member-name initial-state">
+                                        Cláudia
                                       </p>
+                                      <p class="text-blk position initial-state"></p>
+                                    </div>
+                                </div>
+                          </div>
+
+                          <div class="responsive-cell-block wk-desk-3 wk-mobile-12 wk-tab-4 wk-ipadp-4 team-card-container">
+                                <div class="team-card">
+                                    <div class="team-img-wrapper">
+                                      <img class="team-img initial-state" src="{{ url_for('static', filename='img/team-member6.webp') }}" alt="team member - Maria - photo" loading="lazy">
+                                    </div>
+                                    <div class="team-card-content">
+                                      <p class="team-member-name initial-state">
+                                        Maria
+                                      </p>
+                                      <p class="text-blk position initial-state"></p>
+                                    </div>
+                                </div>
+                          </div>
+
+                          <div class="responsive-cell-block wk-desk-3 wk-mobile-12 wk-tab-4 wk-ipadp-4 team-card-container">
+                                <div class="team-card">
+                                    <div class="team-img-wrapper">
+                                      <img class="team-img initial-state" src="{{ url_for('static', filename='img/team-member7.webp') }}" alt="team member - Mariana - photo" loading="lazy">
+                                    </div>
+                                    <div class="team-card-content">
+                                      <p class="team-member-name initial-state">
+                                        Mariana
+                                      </p>
+                                      <p class="text-blk position initial-state"></p>
                                     </div>
                                 </div>
                           </div>

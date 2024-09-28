@@ -69,11 +69,11 @@ h1 {
 
 .fade-in {
     transform: translateY(0px);
-    -webkit-animation: fade-in 2s; /* Safari, Chrome and Opera > 12.1 */
-        -moz-animation: fade-in 2s; /* Firefox < 16 */
-            -ms-animation: fade-in 2s; /* Internet Explorer */
-                -o-animation: fade-in 2s; /* Opera < 12.1 */
-                    animation: fade-in 2s;
+    -webkit-animation: fade-in 1s; /* Safari, Chrome and Opera > 12.1 */
+        -moz-animation: fade-in 1s; /* Firefox < 16 */
+            -ms-animation: fade-in 1s; /* Internet Explorer */
+                -o-animation: fade-in 1s; /* Opera < 12.1 */
+                    animation: fade-in 1s;
 }
 
 @keyframes fade-in {
@@ -333,14 +333,6 @@ nav input {
     clip-path:polygon(50% 100%, 100% 0, 0 0);
 }
 
-.text-blk {
-    margin-top: 0px;
-    margin-right: 0px;
-    margin-bottom: 0px;
-    margin-left: 0px;
-    line-height: 25px;
-}
-
 .responsive-container-block {
     min-height: 75px;
     height: fit-content;
@@ -383,23 +375,20 @@ nav input {
 }
 
 .about-team-head-text {
-    line-height: 50px;
-    font-weight: 900;
+    color: #fff;
     text-align: center;
-    margin-top: 0px;
-    margin-right: 0px;
     margin-bottom: 70px;
-    margin-left: 0px;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
 }
 
-.name {
-    font-size: 18px;
+.team-member-name {
+    color: #fff;
+    font-size: 1.3rem;
+    font-weight: bold;
     margin-top: 11px;
     margin-right: 0px;
     margin-bottom: 0px;
     margin-left: 0px;
-    font-weight: 700;
 }
 
 .position {
@@ -423,15 +412,19 @@ nav input {
 }
 
 .team-img-wrapper {
-    border-top-left-radius: 6px;
-    border-top-right-radius: 6px;
-    border-bottom-right-radius: 6px;
-    border-bottom-left-radius: 6px;
+    border-radius: 6px;
     box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.3);
+    width: 100%;
+    max-width: 100%;
+    height: 400px;
+    overflow: hidden;
 }
 
 .team-img {
-    max-width: 100%;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
 }
 
 @media (max-width: 500px) {
@@ -651,8 +644,19 @@ nav input {
     background-color: #FEEFAD;
 }
 
+.services-img-wrapper {
+    width: 40%;
+    max-width: 40%;
+    height: 500px;
+}
+
 .services-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
     box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.3);
+
 }
 
 /*-- TESTIMONIALS CAROUSEL --*/
@@ -682,9 +686,9 @@ nav input {
     width: 1000px;
 }
 
-.testimonials-bg-div h1 {
+.testimonials-h1 {
+    color: #fff;
     text-align: center;
-    font-size: clamp(2rem, 4vw, 2.6rem);
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
 }
 
