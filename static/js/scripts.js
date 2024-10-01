@@ -1,3 +1,12 @@
+/* NAVBAR NAVIGATION */
+document.querySelectorAll(".nav-link").forEach(item => {
+    item.addEventListener("click", event => {
+        event.preventDefault();
+        document.getElementById("hamburger").checked = false;
+        setTimeout(() => window.location.hash = item.getAttribute("href"), 50);
+    });
+});
+
 /* HOMEPAGE CAROUSEL */
 const buttons = document.querySelectorAll(".carousel-btn");
 const slideRow = document.getElementById("slide-row");

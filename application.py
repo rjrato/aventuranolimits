@@ -54,7 +54,7 @@ def form_contact():
                     msg=msg.as_string()
                 )
             return jsonify({"status": "success",
-                            "message": "Mensagem recebida!\nIremos responde o mais breve possível."}), 200
+                            "message": "Mensagem recebida!\nResponderemos brevemente."}), 200
         except Exception as e:
             return jsonify({"status": "error", "message": str(e)}), 500
 

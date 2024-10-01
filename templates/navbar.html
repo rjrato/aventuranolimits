@@ -6,32 +6,27 @@
         <!-- NAVBAR -->
         <section id="navbar">
 
-            <nav class="navbar">
+            <nav class="p-0 navbar">
 
-                <div id="justify-content-start" class="nav-logo-img-div">
-                    <img class="nav-logo-img" src="{{ url_for('static', filename='img/logo.webp') }}" alt="navbar company logo" loading="lazy">
-                </div>
+                <input type="checkbox" id="hamburger" class="navbar-input" name="hamburger" />
+                <label for="hamburger" class="navbar-label">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </label>
 
-                <div class="nav-links">
-                    <ul class="d-flex p-2 m-0 nav-links-ul">
-                        <li class="ps-2 pe-2"><a id="nav-home" class="nav-link" href="#homepage" aria-label="home" >Início</a></li>
-                        <li class="ps-2 pe-2"><a id="nav-who-we-are" class="nav-link" href="#about" aria-label="who we are" >Quem Somos</a></li>
-                        <li class="ps-2 pe-2"><a id="nav-activities" class="nav-link" href="#services" aria-label="activities" >Atividades</a></li>
-                        <li class="ps-2 pe-2"><a id="nav-testimonials" class="nav-link" href="#testimonials" aria-label="testimonials" >Testemunhos</a></li>
-                        <li class="ps-2 pe-2"><a id="nav-contacts" class="nav-link" href="#contacts" aria-label="contacts" >Contactos</a></li>
-                    </ul>
-                </div>
+                <img class="nav-logo-img" src="{{ url_for('static', filename='img/logo.webp') }}" alt="navbar company logo" loading="lazy">
 
-                <div id="hamburger-div" class="justify-content-end nav-hamburger">
-                    <input type="checkbox" id="hamburger-input" name="hamburger" />
-                    <label for="hamburger-input">
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                    </label>
-                </div>
+                <ul class="m-0 nav-links-ul">
+                    <li class="ps-2 pe-2"><a id="nav-home" class="nav-link" href="#homepage" aria-label="home" >Início</a></li>
+                    <li class="ps-2 pe-2"><a id="nav-who-we-are" class="nav-link" href="#about" aria-label="who we are" >Quem Somos</a></li>
+                    <li class="ps-2 pe-2"><a id="nav-activities" class="nav-link" href="#services" aria-label="activities" >Atividades</a></li>
+                    <li class="ps-2 pe-2"><a id="nav-testimonials" class="nav-link" href="#testimonials" aria-label="testimonials" >Testemunhos</a></li>
+                    <li class="ps-2 pe-2"><a id="nav-contacts" class="nav-link" href="#contacts" aria-label="contacts" >Contactos</a></li>
+                </ul>
 
             </nav>
+
         </section>
 
     </header>
