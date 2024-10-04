@@ -366,7 +366,7 @@ h1 {
 
 /*-- ABOUT --*/
 .about-team-bg {
-    background-color: #F5F7F8;
+    background-color: #FEEFAD;
 }
 
 .about-team-img {
@@ -391,10 +391,6 @@ h1 {
 
 .about-description-h1, .about-description-h2 {
     text-align: center;
-}
-
-.about-description-h1 {
-    color: #3d83b7;
 }
 
 .about-description-p {
@@ -595,7 +591,7 @@ h1 {
 .services-bg {
     padding-top: 0;
     padding-bottom: 20px;
-    background-color: #F5F7F8;
+    background-color: #FEEFAD;
 }
 
 .services-hr {
@@ -620,13 +616,11 @@ h1 {
 
 .services-h1 {
     padding-top: 35px;
-    color: #3d83b7;
 }
 .service-h2 {
     text-align: center;
     padding-top: 20px;
     padding-bottom: 20px;
-    color: #03AED2;
 }
 
 .service-img {
@@ -646,6 +640,16 @@ h1 {
 .service3-img {
     position: relative;
     height: 100%;
+}
+
+.catalog-btn {
+    margin: 40px;
+    padding: 20px;
+    filter: drop-shadow(4px 4px 8px rgba(0, 0, 0, 0.5));
+}
+
+.container {
+    max-width: 1200px;
 }
 
 @media (min-width: 768px) {
@@ -675,6 +679,10 @@ h1 {
 
     .service2-img {
         height: 95%;
+    }
+
+    .catalog-btn {
+        margin: 40px 10vw 50px 10vw;
     }
 }
 
@@ -714,6 +722,11 @@ h1 {
 
     .services-p {
         font-size: 1.2rem;
+    }
+
+    .catalog-btn {
+        margin: 40px 120px 40px 120px;
+        padding: 20px;
     }
 }
 
@@ -1012,7 +1025,6 @@ h1 {
 
 .contacts-h1 {
     margin-top: 20px;
-    color: #3d83b7;
 }
 
 .contacts-media-icons-div {
