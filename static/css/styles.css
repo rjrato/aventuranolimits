@@ -109,8 +109,8 @@ h1 {
 
 .divider {
     width: 100%;
-    height: 5rem;
-    background-color: rgba(0, 0, 0, .1);
+    height: 8rem;
+    background-color: #FEEFAD;
     border: solid rgba(0, 0, 0, .15);
     border-width: 1px 0;
     box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
@@ -342,36 +342,44 @@ h1 {
     right: 0;
     bottom: 0;
     background: url('../img/welcome-page.webp') no-repeat center center/cover;
-    filter: brightness(50%);
     z-index: -1;
 }
 
 .homepage-logo {
     display: flex;
     position: relative;
-    top: 100px;
+    top: 98px;
     margin: 0 auto;
-    width: 35vw;
+    width: 39vw;
     height: auto;
     opacity: 1;
 }
 
+.welcome-catalog-btn-div {
+    display: flex;
+    flex-direction: row;
+    align-content: flex-end;
+    padding-bottom: 20px;
+}
+
 .welcome-catalog-btn {
+    font-family: "Arimo" !important;
+    font-weight: bold;
+    font-size: 1.3rem;
+    letter-spacing: 0.02rem;
     display: flex;
     position: relative;
     align-items: center;
     justify-content: center;
-    top: 300px;
+    top: 290px;
     margin: 0 auto;
     width: 180px;
-    height: 40px;
-    padding: 20px;
-    background: #68D2E8;
+    height: 46px;
+    background: #03AED2;
     color: #fff !important;
     text-align: center;
     border-radius: 5px;
     box-shadow: 0 0 50px 15px #fff;
-
 }
 
 .welcome-catalog-btn:hover {
@@ -387,12 +395,45 @@ h1 {
     border: solid #68D2E8 !important;
 }
 
+@media (min-width: 410px) {
+    .homepage-logo {
+        top: 104px;
+    }
+
+    .welcome-catalog-btn {
+        top: 320px;
+    }
+
+}
+
+@media (min-width: 576px) {
+    .homepage-logo {
+        top: 120px;
+        width: 43vw;
+    }
+
+    .welcome-catalog-btn {
+        top: 320px;
+    }
+}
+
 @media (min-width: 768px) {
     .welcome-page-div2 {
         position: relative;
         height: 90vw;
         width: auto;
         z-index: 1;
+    }
+
+    .homepage-logo {
+        top: 82px;
+        width: 40vw;
+    }
+
+    .welcome-catalog-btn {
+        top: 389px;
+        width: 200px;
+        height: 60px;
     }
 }
 
@@ -406,8 +447,8 @@ h1 {
 
     .homepage-logo {
         position: absolute;
-        top: 245px;
-        right: 125px;
+        top: 265px;
+        right: 100px;
         width: 25vw;
         height: auto;
         margin: 0;
@@ -416,11 +457,10 @@ h1 {
 
     .welcome-catalog-btn {
         position: absolute;
-        top: 450px;
-        right: 125px;
-        margin: 0 auto;
-        width: 180px;
-        height: 40px;
+        top: 490px;
+        right: 90px;
+        width: 200px;
+        height: 60px;
     }
 }
 
@@ -447,8 +487,7 @@ h1 {
         top: 580px;
         right: 100px;
         width: 220px;
-        height: 40px;
-        padding: 40px;
+        height: 75px;
     }
 }
 
@@ -477,7 +516,7 @@ h1 {
         top: 700px;
         right: 185px;
         width: 220px;
-        height: 40px;
+        height: 75px;
     }
 }
 
@@ -496,7 +535,6 @@ h1 {
     height: 90vw;
     width: auto;
     background: url('../img/about1.webp') no-repeat center center/cover;
-    filter: brightness(90%);
 }
 
 .about-description-div {
@@ -651,7 +689,6 @@ h1 {
         right: 0;
         bottom: 0;
         background: url('../img/about1.webp') no-repeat center center/cover;
-        filter: brightness(50%);
         z-index: -1;
     }
 
@@ -725,7 +762,7 @@ h1 {
 
 @media(min-width: 992px) {
     .about-description-div {
-        max-width: 1200px;
+        max-width: 1100px;
     }
 
     .about-description-p {
@@ -735,7 +772,7 @@ h1 {
     .about-team-bg {
         display: flex;
         align-items: flex-end;
-        height: 78vw;
+        height: 60vw;
     }
 
     .about-team-members-div {
@@ -747,6 +784,17 @@ h1 {
     .team-card-container {
         padding: 10px;
         width: 23%;
+    }
+}
+
+@media(min-width: 1500px) {
+    .about-team-bg {
+        height: 55vw;
+    }
+
+    .about-description-div {
+        backdrop-filter: blur(10px) brightness(1.1);
+        -webkit-backdrop-filter: blur(10px) brightness(1.1);
     }
 }
 
