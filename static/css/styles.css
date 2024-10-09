@@ -348,9 +348,9 @@ h1 {
 .homepage-logo {
     display: flex;
     position: relative;
-    top: 98px;
+    top: 95px;
     margin: 0 auto;
-    width: 39vw;
+    width: 43vw;
     height: auto;
     opacity: 1;
 }
@@ -371,7 +371,7 @@ h1 {
     position: relative;
     align-items: center;
     justify-content: center;
-    top: 290px;
+    top: 280px;
     margin: 0 auto;
     width: 180px;
     height: 46px;
@@ -397,11 +397,12 @@ h1 {
 
 @media (min-width: 410px) {
     .homepage-logo {
-        top: 104px;
+        top: 95px;
+        width: 45vw;
     }
 
     .welcome-catalog-btn {
-        top: 320px;
+        top: 310px;
     }
 
 }
