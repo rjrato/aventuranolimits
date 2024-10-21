@@ -19,6 +19,7 @@ EMAIL = os.getenv("EMAIL")
 PASS = os.getenv("PASS")
 TO_ADDRESS = os.getenv("TO_ADDRESS")
 WHATSAPP = os.getenv("WHATSAPP")
+CATALOG = os.getenv("CATALOG")
 recaptcha_site_key = os.getenv("RECAPTCHA_SITE_KEY")
 recaptcha_secret_key = os.getenv("RECAPTCHA_SECRET_KEY")
 
@@ -73,8 +74,7 @@ def index():
 @application.route("/progresso")
 def progress():
     year = datetime.now().year
-    print(f"Recaptcha Site Key: {recaptcha_site_key}")  # Debug line
-    return render_template("index.html", year=year, key=recaptcha_site_key, wp=WHATSAPP)
+    return render_template("index.html", year=year, key=recaptcha_site_key, wp=WHATSAPP, catalog=CATALOG)
 
 
 @application.route("/contact", methods=["POST"])
