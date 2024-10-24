@@ -126,29 +126,6 @@ h1 {
     align-items: center;     /* Vertically center */
 }
 
-.welcome-page-div {
-    background-image: url('../img/welcome-page.webp'); /* Image path */
-    background-size: cover; /* Make image cover entire div */
-    background-position: center; /* Center the image */
-    background-repeat: no-repeat; /* Prevent repeating */
-    width: 100vw; /* Full width of viewport */
-    height: 100vh; /* Full height of viewport */
-    display: flex;
-    justify-content: center; /* Horizontally center the text */
-    align-items: center;     /* Vertically center the text */
-    position: relative;
-}
-
-.welcome-page-div h1 {
-    color: white; /* Text color */
-    font-size: 3rem; /* Adjust size as needed */
-    text-align: center;
-    z-index: 1; /* Ensure the text is above the background image */
-    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black background */
-    padding: 10px 20px;
-    border-radius: 8px;
-}
-
 .container-fluid {
     padding: 0;
     margin: 0;
