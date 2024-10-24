@@ -61,17 +61,7 @@ def form_contact():
             return jsonify({"status": "error", "message": str(e)}), 500
 
 
-@application.route('/favicon.ico')
-def favicon():
-    return '', 204
-
-
 @application.route("/")
-def index():
-    return render_template("welcome-page.html")
-
-
-@application.route("/progresso")
 def progress():
     year = datetime.now().year
     return render_template("index.html", year=year, key=recaptcha_site_key, wp=WHATSAPP, catalog=CATALOG)

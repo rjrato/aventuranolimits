@@ -20,6 +20,7 @@
         url("./../fonts/Lovelo-Black.woff2") format("woff2"),
         url("./../fonts/Lovelo-Black.woff") format("woff"),
         url("./../fonts/Lovelo-Black.ttf") format("truetype");
+    font-display: swap;
 }
 
 *,
